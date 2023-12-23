@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One");
+
+:root {
+    --body-color: rgba(173, 173, 173, 0.432);
+    --title-color: hsl(0, 0%, 76%);
+    --text-color: hsl(0, 0%, 96%);
+    --first-color: hsl(0, 0%, 59%);
+    --container-color: rgb(165, 165, 165);
+    --h2-font-size: 1.25rem;
+    --small-font-size: .875rem;
+}
+
+@media screen and (min-width: 1120px) {
+    :root {
+        --h2-font-size: 1.5rem;
+        --small-font-size: .889rem;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 69px;
+}
+
+h3 {
+    text-align: center;
+    color: white;
+    font-size: 69px;
+}
+
+
+p {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.username {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Adds an ellipsis (...) when the text overflows */
+    font-size: 30px;
+    /* Specify your desired font size */
+}
+
+
+.login img {
+    height: 70px;
+    width: 70px;
+}
+
+
+
+
+.login {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 220px;
+    border-radius: 50px;
+    /* Updated to make it circular */
+    outline: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    border: none;
+    background-color: grey;
+}
+
+.login:hover {
+    background-color: rgb(91, 91, 91);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust the minmax values as needed */
+    gap: 1.5rem;
+    place-items: center;
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+    border-radius: 30px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    background-color: var(--body-color);
+    
+}
+
+
+.card__article{
+    position: relative;
+    overflow: hidden;
+}
+
+.card__img {
+    width: 400px;
+    border-radius: 1.5rem;
+}
+
+.card__data{
+    width: 280px;
+    background: linear-gradient(135deg, #BF3ED7, #8C2FFF);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 24px hsla(0, 0%, 46%, 0.661);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -11rem; /* -8rem */
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;
+    transition: opacity 1s 1s;
+    z-index: 1000;
+}
+
+.card__article:hover .card__data {
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.card__article:hover .card__img {
+    filter: blur(3px); /* Adjust the blur amount as needed */
+    transition: filter 0.8s;
+}
+
+
+.card__article:hover{
+    animation: remove-overflow 2s forwards;
+}
+
+.card__article:not(:hover){
+    animation: show-overflow 2s forwards;
+}
+
+.card__article:not(:hover) .card__data{
+    animation: remove-data 1s forwards;
+}
+
+@keyframes show-data{
+    50%{
+        transform: translateY(-12rem);
+    }
+    100%{
+        transform: translateY(-8rem);
+    }
+}
+
+@keyframes remove-overflow{
+    to{
+        overflow: initial;
+    }
+}
+
+@keyframes remove-data{
+    0%{
+        transform: translateY(-8rem);
+    }
+    50%{
+        transform: translateY(-13rem);
+    }
+    100%{
+        transform: translateY(.5rem);
+    }
+}
+
+@keyframes show-overflow{
+    0%{
+        overflow: initial;
+        pointer-events: none;
+    }
+    50%{
+        overflow: hidden;
+    }
+}
+
+.card__description{
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: .25rem;
+
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--title-color);
+}
+
+.card__title{
+    font-size: var(--h2-font-size);
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--title-color);
+    margin-bottom: .75rem;
+}
+
+.card__button{
+    text-decoration: none;
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(120deg, #cb68dc, #7c3bcb);
+    border-radius: 1rem;
+    margin-bottom: .75rem;
+}
+
+
+.card__container{
+    display:grid;
+    row-gap: 3.5rem;
+}
+
+.login:active {
+    background-color: rgb(71, 71, 71);
+}
+
+
+
+body {
+    background-color: black;
+    margin: 0px;
+}
+
+main {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+
+.navbar ul {
+    list-style-type: none;
+    background-color: hsl(0, 0%, 25%);
+    padding: 0%;
+    margin: 0%;
+    overflow: hidden;
+}
+
+.navbar button {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: rgb(43, 43, 43);
+}
+
+.navbar li {
+    float: left;
+}

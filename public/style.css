@@ -1,0 +1,98 @@
+h1{
+    text-align: center;
+    color: white;
+    font-size: 69px;
+}
+
+h3{
+    text-align: center;
+    color: white;
+    font-size: 69px;
+}
+
+
+p{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.username {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds an ellipsis (...) when the text overflows */
+    font-size: 30px; /* Specify your desired font size */
+}
+
+
+.login img {
+    height: 70px;
+    width: 70px;
+}
+
+
+
+
+.login {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 220px;
+    border-radius: 50px; /* Updated to make it circular */
+    outline: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    border: none;
+    background-color: grey;
+}
+
+.login:hover
+{
+    background-color: rgb(91, 91, 91);
+}
+.login:active
+{
+    background-color: rgb(71, 71, 71);
+}
+
+
+
+body
+{
+    background-color: black;
+    margin: 0px;
+}
+
+main{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+.navbar ul{
+    list-style-type: none;
+    background-color: hsl(0, 0%, 25%);
+    padding: 0%;
+    margin: 0%;
+    overflow: hidden;
+}
+.navbar button{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover
+{
+    background-color: hsl(0%, 0%, 22%);
+}
+.navbar li {
+    float: left;
+}

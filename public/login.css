@@ -1,0 +1,94 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    text-align: center; /* Center text within the body */
+}
+
+.buttons
+{
+    display: flex;
+    justify-content: center;
+}
+
+.buttons li{
+    color: white;
+    text-decoration: none;
+    text-decoration-color: white;
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+
+.navButtons {
+    display: block;
+    border-radius: 0;
+    font-size: 30px;
+    background-color: gray;
+    border: 0;
+    padding: 10px;
+}
+
+.navButtons:hover {
+    background-color: rgb(92, 92, 92);
+}
+
+.buttons li {
+    float: left;
+    display: flexbox;
+    
+}
+
+h1 {
+    color: white;
+    font-size: 69px;
+    padding-bottom: 50px;
+}
+
+.Email {
+    width: 300px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 30px;
+}
+
+/* Apply the styles to the input field with the "username" class */
+input.Email {
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.Password {
+    width: 300px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 30px;
+}
+
+/* Apply the styles to the input field with the "username" class */
+input.Password {
+    text-align: center;
+    box-sizing: border-box;
+}
+
+input:hover
+{
+    background-color: rgb(211, 211, 211);
+}
